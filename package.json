@@ -52,7 +52,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "postbuild": "yarn run compress_maps && cp build/index.html build/404.html && yarn run build:sw",
+    "postbuild": "npm run compress_maps && cp build/index.html build/404.html && npm run build:sw",
     "compress_maps": "rollup -c",
     "test": "react-scripts test --testPathIgnorePatterns=src/tests/ --passWithNoTests",
     "test:map": "react-scripts test src/tests/mapAndApiStateNames.test.js",
@@ -71,15 +71,15 @@
   },
   "lint-staged": {
     "*.+(js|jsx)": [
-      "yarn run eslint:fix",
+      "npm run eslint:fix",
       "prettier --write \"**/*.+(js|jsx)\""
     ],
     "*.+(json|yml|yaml|md)": [
       "prettier --write \"**/*.+(json|yml|yaml|md)\""
     ],
     "*.+(css|scss)": [
-      "yarn run scss-lint:fix",
-      "yarn run scss-lint"
+      "npm run scss-lint:fix",
+      "npm run scss-lint"
     ]
   },
   "devDependencies": {
